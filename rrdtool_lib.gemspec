@@ -15,5 +15,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = RrdtoolLib::VERSION
 
-  s.extensions << 'rrdtool/extconf.rb'
+  gem.extensions << 'rrdtool/extconf.rb'
 end
