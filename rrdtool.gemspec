@@ -6,7 +6,8 @@ Gem::Specification.new do |s|
   s.description = "An RRDtool cli"
   s.authors     = ["Nicolas Brousse"]
   s.email       = 'pro@nicolas-brousse.fr'
-  s.files       = ["lib/*.rb"]
+  s.required_ruby_version = '>= 1.9.2'
+  s.files = Dir['lib/**/*.rb'] + Dir['rrdtool/**/*'] + ['LICENSE', 'README.md']
   s.homepage    =
     'http://github.com/nicolas-brousse/rrdtool'
 end
