@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Nicolas Brousse"]
   gem.email         = ["pro@nicolas-brousse.fr"]
   gem.description   = %q{An RRDtool cli}
-  gem.summary       = %q{An RRDtool cli}
+  gem.summary       = %q{RRDtool cli}
   gem.homepage      = "http://github.com/nicolas-brousse/rrdtool"
 
   gem.files         = `git ls-files`.split($\)
