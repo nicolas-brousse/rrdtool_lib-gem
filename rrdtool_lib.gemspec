@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["pro@nicolas-brousse.fr"]
   gem.description   = %q{An RRDtool cli}
   gem.summary       = %q{RRDtool cli}
-  gem.homepage      = "http://github.com/nicolas-brousse/rrdtool"
+  gem.homepage      = "http://github.com/nicolas-brousse/rrdtool_lib-gem"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
