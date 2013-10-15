@@ -1,7 +1,0 @@
-MACOSX_DEPLOYMENT_TARGET=10.6
-CPPFLAGS="-I/usr/X11R6/include/libpng12 -I/usr/X11R6/include/freetype2 -I/usr/local/lib -I/usr/local/include/libart-2.0 -I/usr/local -I/usr/X11R6" CFLAGS=" -arch i386 -arch x86_64 -arch ppc  -g -Os -pipe -no-cpp-precomp"
-CCFLAGS=" -arch i386 -arch x86_64 -arch ppc -g -Os  -pipe"
-CXXFLAGS=" -arch i386 -arch x86_64 -arch ppc -g -Os  -pipe"
-LDFLAGS="-L/usr/X11R6/lib -L/usr/local/lib -arch i386 -arch x86_64 -arch ppc -bind_at_load"
-mkdir src
-./configure --prefix=./src --disable-python --disable-tcl --disableruby --disable-dependency-tracking
