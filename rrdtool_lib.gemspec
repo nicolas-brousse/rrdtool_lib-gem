@@ -21,5 +21,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
 
-  spec.extensions << 'ext/rrdtool/extconf.rb'
+  spec.extensions << 'ext/rrdtool/bindings/ruby/extconf.rb'
 end
