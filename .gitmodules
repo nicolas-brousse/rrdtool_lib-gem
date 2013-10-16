@@ -1,3 +1,0 @@
-[submodule "ext/rrdtool/rrdtool"]
-	path = ext/rrdtool/rrdtool
-	url = git@github.com:oetiker/rrdtool-1.x.git
