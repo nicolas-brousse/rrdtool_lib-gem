@@ -35,5 +35,5 @@ Gem::Specification.new do |spec|
     end
   end
 
-  spec.extensions << 'ext/rrdtool/bindings/ruby/extconf.rb'
+  spec.extensions << 'ext/rrdtool-1.4.8/bindings/ruby/extconf.rb'
 end
