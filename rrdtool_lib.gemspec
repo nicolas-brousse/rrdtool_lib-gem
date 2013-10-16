@@ -23,26 +23,15 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake-compiler"
 
   # get an array of submodule dirs by executing 'pwd' inside each submodule
+  gem_dir = File.expand_path(File.dirname(__FILE__)) + "/"
   `git submodule --quiet foreach pwd`.split($\).each do |submodule_path|
-    # for each submodule, change working directory to that submodule
     Dir.chdir(submodule_path) do
-
-      # issue git ls-files in submodule's directory
-      submodule_files = `git ls-files`.split($\)
-
+      submodule_relative_path = submodule_path.sub gem_dir, ""
+      # issue git ls-files in submodule's directory and
       # prepend the submodule path to create absolute file paths
-      submodule_files_fullpaths = submodule_files.map do |filename|
-        "#{submodule_path}/#{filename}"
+      `git ls-files`.split($\).each do |filename|
+        spec.files << "#{submodule_relative_path}/#{filename}"
       end
-
-      # remove leading path parts to get paths relative to the gem's root dir
-      # (this assumes, that the gemspec resides in the gem's root dir)
-      submodule_files_paths = submodule_files_fullpaths.map do |filename|
-        filename.gsub "#{File.dirname(__FILE__)}/", ""
-      end
-
-      # add relative paths to gem.files
-      spec.files += submodule_files_paths
     end
   end
 
